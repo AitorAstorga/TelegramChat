@@ -54,7 +54,7 @@ public class Telegram {
 		try {
 			JsonObject obj = sendGet(String.format(API_URL_GETME, token));
 			authJson = obj;
-			TelegramChat.getInstance().getLogger().info("Established a connection with the telegram servers.");
+			//TelegramChat.getInstance().getLogger().info("Established a connection with the telegram servers.");
 			connected = true;
 			return true;
 		} catch (Exception e) {
@@ -219,7 +219,7 @@ public class Telegram {
 			reader.close();
 		} catch (Exception e) {
 			reconnect();
-			TelegramChat.getInstance().getLogger().info("Disconnected from Telegram, reconnect...");
+			//TelegramChat.getInstance().getLogger().info("Disconnected from Telegram, reconnect...");
 		}
 
 	}
